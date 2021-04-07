@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplicationtesting.CustomerController">
+   <children>
+      <Label layoutX="152.0" layoutY="13.0" text="Owner's Customer screen">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font></Label>
+      <Button layoutX="483.0" layoutY="342.0" mnemonicParsing="false" onAction="#BackButtonPushed" prefHeight="26.0" prefWidth="78.0" text="Back" />
+      <TableView fx:id="tableView" layoutX="115.0" layoutY="50.0" prefHeight="226.0" prefWidth="338.0">
+         <columns>
+            <TableColumn fx:id="UsernameColumn" onEditCommit="#changeUserNameCellEvent" prefWidth="121.5999755859375" text="Username" />
+            <TableColumn fx:id="PasswordColumn" onEditCommit="#changePasswordCellEvent" prefWidth="124.79998779296875" text="Password" />
+            <TableColumn fx:id="PointsColumn" onEditCommit="#changePointsCellEvent" prefWidth="92.0" text="Points" />
+         </columns>
+      </TableView>
+      <HBox layoutX="115.0" layoutY="293.0" prefHeight="26.0" prefWidth="338.0" spacing="10.0">
+         <children>
+            <TextField fx:id="UsernameTextField" promptText="Username" />
+            <TextField fx:id="PasswordTextField" promptText="Password" />
+         </children>
+      </HBox>
+      <HBox layoutX="320.0" layoutY="342.0" prefHeight="26.0" prefWidth="162.0" spacing="10.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AddButtonPushed" prefHeight="26.0" prefWidth="63.0" text="Add" />
+            <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="26.0" prefWidth="66.0" text="Delete" />
+         </children>
+      </HBox>
+      <Button layoutX="572.0" mnemonicParsing="false" onAction="#closeButtonPushed" text="[x]" />
+   </children>
+</AnchorPane>

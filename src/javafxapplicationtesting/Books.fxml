@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplicationtesting.BooksController">
+   <children>
+      <Label layoutX="192.0" layoutY="15.0" text="Owner's Book screen">
+         <font>
+            <Font name="System Bold Italic" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="booktableview" layoutX="128.0" layoutY="57.0" prefHeight="200.0" prefWidth="260.0">
+        <columns>
+          <TableColumn fx:id="BooknameColumn" prefWidth="130.4000244140625" text="Bookname" />
+          <TableColumn fx:id="BookpriceColumn" prefWidth="128.79998779296875" text="Bookprice" />
+        </columns>
+      </TableView>
+      <HBox layoutX="128.0" layoutY="265.0" prefHeight="26.0" prefWidth="260.0" spacing="20.0">
+         <children>
+            <TextField fx:id="BooknameTextField" prefHeight="26.0" prefWidth="100.0" promptText="Bookname" />
+            <TextField fx:id="BookpriceTextField" prefHeight="26.0" prefWidth="100.0" promptText="Bookprice" />
+         </children>
+      </HBox>
+      <HBox layoutX="290.0" layoutY="315.0" prefHeight="34.0" prefWidth="260.0" spacing="20.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AddButtonPushed" prefHeight="26.0" prefWidth="78.0" text="Add" />
+            <Button mnemonicParsing="false" onAction="#deleteButtonPushed" prefHeight="26.0" prefWidth="78.0" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#BackButtonPushed" prefHeight="26.0" prefWidth="78.0" text="Back" />
+         </children>
+      </HBox>
+      <Button layoutX="587.0" layoutY="-5.0" mnemonicParsing="false" onAction="#closeButtonPushed" text="[x]" />
+   </children>
+</AnchorPane>

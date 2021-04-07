@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplicationtesting.CustomerStartScreenController">
+   <children>
+      <TableView fx:id="customerbooktableview" layoutX="156.0" layoutY="88.0" prefHeight="200.0" prefWidth="275.0">
+        <columns>
+          <TableColumn fx:id="booknameColumn" prefWidth="96.79998779296875" text="BookName" />
+          <TableColumn fx:id="bookpriceColumn" prefWidth="88.0" text="Bookprice" />
+            <TableColumn fx:id="actionColumn" prefWidth="89.60002441406249" text="Selection" />
+        </columns>
+      </TableView>
+      <HBox layoutX="51.0" layoutY="300.0" prefHeight="40.0" prefWidth="459.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#CustomerStartScreenBuyButtonPushed" prefHeight="26.0" prefWidth="87.0" text="Buy" />
+            <Button mnemonicParsing="false" onAction="#CustomerStartScreenRedeemPointsandBuyButtonPushed" prefHeight="25.0" prefWidth="165.0" text="Redeem Points and Buy" />
+            <Button mnemonicParsing="false" onAction="#CustomerStartScreenLogoutButtonPushed" prefHeight="26.0" prefWidth="95.0" text="Logout" />
+         </children>
+      </HBox>
+      <Label fx:id="welcomelabel" layoutX="110.0" layoutY="40.0" prefHeight="40.0" prefWidth="223.0" text="Label">
+         <effect>
+            <Bloom />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <CheckBox fx:id="selectAll" layoutX="349.0" layoutY="60.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="80.0" text="SelectAll" />
+   </children>
+</AnchorPane>

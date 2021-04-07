@@ -1,0 +1,2 @@
+Java,20
+Python,50
