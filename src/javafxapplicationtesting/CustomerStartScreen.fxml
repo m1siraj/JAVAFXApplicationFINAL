@@ -19,14 +19,14 @@
             <TableColumn fx:id="actionColumn" prefWidth="89.60002441406249" text="Selection" />
         </columns>
       </TableView>
-      <HBox layoutX="51.0" layoutY="300.0" prefHeight="40.0" prefWidth="459.0" spacing="30.0">
+      <HBox layoutX="80.0" layoutY="318.0" prefHeight="40.0" prefWidth="459.0" spacing="30.0">
          <children>
             <Button mnemonicParsing="false" onAction="#CustomerStartScreenBuyButtonPushed" prefHeight="26.0" prefWidth="87.0" text="Buy" />
             <Button mnemonicParsing="false" onAction="#CustomerStartScreenRedeemPointsandBuyButtonPushed" prefHeight="25.0" prefWidth="165.0" text="Redeem Points and Buy" />
             <Button mnemonicParsing="false" onAction="#CustomerStartScreenLogoutButtonPushed" prefHeight="26.0" prefWidth="95.0" text="Logout" />
          </children>
       </HBox>
-      <Label fx:id="welcomelabel" layoutX="110.0" layoutY="40.0" prefHeight="40.0" prefWidth="223.0" text="Label">
+      <Label fx:id="welcomelabel" layoutX="14.0" layoutY="14.0" prefHeight="40.0" prefWidth="364.0" text="Label. You have 0 points. Your status is Silver.">
          <effect>
             <Bloom />
          </effect>
@@ -34,6 +34,5 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <CheckBox fx:id="selectAll" layoutX="349.0" layoutY="60.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="80.0" text="SelectAll" />
    </children>
 </AnchorPane>

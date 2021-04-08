@@ -30,6 +30,12 @@ public class CustomerCostScreenController implements Initializable {
     @FXML Label Status;
     @FXML Label Totalprice;
     
+    CustomerCustomer currentCustomer;
+    int points;
+    
+        
+    
+    
     //This method accepts a string to view it as a welcomelabel
     public void initPoints (String s){
         Points.getText();
@@ -41,17 +47,7 @@ public class CustomerCostScreenController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    public void CustomerCostScreenBackButtonPushed(ActionEvent event) throws IOException {
-        Parent tableViewParent = FXMLLoader.load(getClass().getResource("CustomerStartScreen.fxml"));
-        Scene tableViewScene = new Scene(tableViewParent);
-        
-        //Stage info
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tableViewScene);
-        window.show();
-        
-    }
+
     
     public void CustomerCostScreenLogoutButtonPushed(ActionEvent event) throws IOException {
         Parent tableViewParent = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
@@ -63,5 +59,15 @@ public class CustomerCostScreenController implements Initializable {
         window.show();
         
     }
+
+    public void initCustomer(CustomerCustomer customer){
+       currentCustomer = customer;
+        //int x = Integer.parseInt(c.setStatus(Points));
+        //Status.setText(c.setStatus());
+       
+    }
+    
+    
+    
     
 }

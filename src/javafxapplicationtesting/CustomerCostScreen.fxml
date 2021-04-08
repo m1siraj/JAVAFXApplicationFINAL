@@ -5,18 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/16" fx:controller="javafxapplicationtesting.CustomerCostScreenController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplicationtesting.CustomerCostScreenController">
    <children>
       <Label fx:id="CustomerCostScreen" layoutX="25.0" layoutY="22.0" text="Customer Cost Screen">
          <font>
-            <Font name="System Bold Italic" size="14.0" />
+            <Font name="System Bold Italic" size="17.0" />
          </font>
       </Label>
-      <Label fx:id="Points" layoutX="408.0" layoutY="33.0" text="Points: " />
-      <Label fx:id="Status" layoutX="408.0" layoutY="59.0" text="Status: " />
-      <Label fx:id="Totalprice" layoutX="250.0" layoutY="274.0" text="Total price:" />
-      <Button layoutX="70.0" layoutY="324.0" mnemonicParsing="false" onAction="#CustomerCostScreenBackButtonPushed" text="Back" />
-      <Button layoutX="447.0" layoutY="324.0" mnemonicParsing="false" onAction="#CustomerCostScreenLogoutButtonPushed" text="Logout" />
+      <Label fx:id="Points" layoutX="408.0" layoutY="33.0" text="Points: 200 " />
+      <Label fx:id="Status" layoutX="408.0" layoutY="59.0" text="Status: Silver " />
+      <Label fx:id="Totalprice" layoutX="246.0" layoutY="183.0" text="Total Price:" />
+      <Button layoutX="457.0" layoutY="321.0" mnemonicParsing="false" onAction="#CustomerCostScreenLogoutButtonPushed" prefHeight="45.0" prefWidth="116.0" text="Logout" />
    </children>
 </AnchorPane>

@@ -70,5 +70,27 @@ public class CustomerCustomer {
         }
         
     }
+    public double buyBook (Books book) {
+    
+        double cost=0;
+        //cost = book.Bookprice;
+        //this.Points = cost * 10;
+        //setStatus.checkLevel();
+   
+        return cost;
+    
+    }
+   
+    public double redeemBuyBook (Books book) {
+   
+        int cost=0;
+        String cost2 = String.valueOf(cost);
+        //cost = (Integer.parseInt(book.Bookprice) - (Points * 0.01));
+        //this.Points = cost * 10;
+        //setStatus.checkLevel();
+   
+        return cost;
+
+    }
     
 }

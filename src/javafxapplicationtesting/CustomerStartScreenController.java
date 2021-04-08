@@ -47,12 +47,8 @@ public class CustomerStartScreenController implements Initializable {
     @FXML TableColumn <Books, String> bookpriceColumn;
     @FXML TableColumn actionColumn;
     
-    @FXML private CheckBox selectAll;
+    //@FXML private CheckBox selectAll;
    
-    
-    public void welcomelabel (String name){
-        welcomelabel.setText("Welcome "+name);
-    }
     
     //This method will populate the customer start screen tableview from the text file
     public ObservableList<Books>  getBooksInCustomerStartScreen()
@@ -86,6 +82,11 @@ public class CustomerStartScreenController implements Initializable {
         return customerbook;
     }
     
+        public void welcomelabel (String name){
+        welcomelabel.setText("Welcome "+name+ ". You have 0 points. Your status is Silver.");
+    }
+    
+    
 
     /**
      * Initializes the controller class.
@@ -111,27 +112,27 @@ public class CustomerStartScreenController implements Initializable {
         //Checkbox Column
         actionColumn.setCellValueFactory(new PropertyValueFactory<Books, String>("Select"));
         
+        /*
+        selectAll.selectedProperty().addListener(new ChangeListener<Boolean>() {
+        @Override
+        public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+            System.out.println("Select All Selected");
+           
+            items = customerbooktableview.getItems();
+           
+            for(Books item : items)
+            {
+                
+                if(selectAll.isSelected())
+                    item.getRemark().setSelected(true);
+                
+                else 
+                    item.getRemark().setSelected(false);
+            }
+        }
+        });*/
         
-//        selectAll.selectedProperty().addListener(new ChangeListener<Boolean>() {
-//        @Override
-//        public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-//            System.out.println("Select All Selected");
-//            
-//            items = customerbooktableview.getItems();
-//            
-//            for(Books item : items)
-//            {
-//                
-//                if(selectAll.isSelected())
-//                    item.getRemark().setSelected(true);
-//                
-//                else 
-//                    item.getRemark().setSelected(false);
-//            }
-//        }
-//        });
     }
-    
     //When this method is called, it will change the scene to a Login view
     
     public void CustomerStartScreenLogoutButtonPushed(ActionEvent event) throws IOException {
@@ -142,6 +143,7 @@ public class CustomerStartScreenController implements Initializable {
         Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
         window.setScene(tableViewScene);
         window.show();
+        
         
     }
     
